@@ -1,6 +1,6 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
-import audioitem from "./sanity/schemas/audioitem.schemas";
+import schemas from "./sanity/schemas/index";
 
 const config = defineConfig({
   projectId: "13nz23e7",
@@ -9,7 +9,7 @@ const config = defineConfig({
   apiVersion: "2023-05-10",
   basePath: "/admin",
   plugins: [deskTool()],
-  schema: { types: [audioitem] },
+  schema: { types: schemas },
 });
 
 export default config;
